@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EntomoShield</title>
+    <style>
+        body {
+            background-color: #FFFF66; /* Light yellow background color */
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            position: relative;
+            overflow: hidden; /* Hide overflow to prevent blurred image from extending beyond viewport */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Use full viewport height */
+        }
+
+        form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(2, 2, 2, 0.7); /* White overlay with 70% opacity */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better contrast */
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fdfafa; /* Dark color for heading */
+        }
+
+        label {
+            font-weight: bold;
+            color: #f8f5f5; /* Dark color for label text */
+        }
+
+        input[type="text"], select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 12px; /* Increase button padding */
+            font-size: 16px; /* Increase button font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/predict" method="post">
+            <h2>Provide Crop Parameters</h2>
+            <label for="N">N (Nitrogen):</label>
+            <input type="text" id="N" name="N" required><br><br>
+
+            <label for="P">P (Phosphorus):</label>
+            <input type="text" id="P" name="P" required><br><br>
+
+            <label for="K">K (Potassium):</label>
+            <input type="text" id="K" name="K" required><br><br>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="text" id="temperature" name="temperature" required><br><br>
+
+            <label for="humidity">Humidity (%):</label>
+            <input type="text" id="humidity" name="humidity" required><br><br>
+
+            <label for="pH">pH:</label>
+            <input type="text" id="pH" name="pH" required><br><br>
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="text" id="rainfall" name="rainfall" required><br><br>
+
+            <input type="submit" value="Recommend Crop">
+        </form>
+    </div>
+</body>
+</html>

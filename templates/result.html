@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Result</title>
+    
+    <!-- Include CSS styles -->
+    <style>
+        body {
+            background-color: #FFFF66; /* Light yellow background color */
+            font-family: Arial, sans-serif;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+            position: relative;
+            overflow: hidden; /* Hide overflow to prevent blurred image from extending beyond viewport */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark color for headings */
+        }
+
+        p {
+            text-align: center;
+            color: #333; /* Dark color for paragraph text */
+            font-size: 24px; /* Larger font size for paragraph */
+            padding: 20px; /* Increased padding for better readability */
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+            border-radius: 10px; /* Rounded corners for the paragraph box */
+        }
+
+        strong {
+            color: #007bff; /* Blue color for strong tag */
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recommended Crop:</h1>
+    <p>The recommended crop based on your inputs is: <strong>{{ crop }}</strong></p>
+    <a href="/">Back to Home</a>
+</body>
+</html>
